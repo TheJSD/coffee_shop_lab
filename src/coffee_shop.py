@@ -36,3 +36,6 @@ class CoffeeShop:
 
 	def drink_names(self):
 		return [drink.name for drink in self.drinks]
+
+	def drinks_customer_can_afford(self, customer):
+		return [drink.name for drink in self.drinks if drink.price <= customer.wallet]
