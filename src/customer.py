@@ -9,3 +9,4 @@ class Customer:
     def buy_drink(self, drink):
         drink_price = drink.price
         self.reduce_wallet(drink_price)
+        return drink_price
