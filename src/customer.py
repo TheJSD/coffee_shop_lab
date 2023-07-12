@@ -11,6 +11,7 @@ class Customer:
     def buy_drink(self, drink):
         drink_price = drink.price
         self.reduce_wallet(drink_price)
+        self.energy += drink.caffeine_level
         return drink_price
     
     def get_age(self):
@@ -18,3 +19,4 @@ class Customer:
     
     def get_energy(self):
         return self.energy
+    

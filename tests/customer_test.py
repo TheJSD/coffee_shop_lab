@@ -21,6 +21,8 @@ class TestCustomer(unittest.TestCase):
     def test_customer_buy_drink(self):
         self.customer.buy_drink(self.drink)
         self.assertEqual(15, self.customer.wallet)
+        self.assertEqual(75, self.customer.energy)
+    
     
     def test_customer_get_age(self):
         return_age = self.customer.get_age()
