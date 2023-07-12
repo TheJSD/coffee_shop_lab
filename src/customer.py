@@ -15,3 +15,6 @@ class Customer:
     
     def get_age(self):
         return self.age
+    
+    def get_energy(self):
+        return self.energy

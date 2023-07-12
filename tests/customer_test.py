@@ -25,3 +25,7 @@ class TestCustomer(unittest.TestCase):
     def test_customer_get_age(self):
         return_age = self.customer.get_age()
         self.assertEqual(self.customer.age, return_age)
+    
+    def test_customer_get_energy(self):
+        return_energy = self.customer.get_energy()
+        self.assertEqual(50, return_energy)
