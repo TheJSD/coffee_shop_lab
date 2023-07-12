@@ -29,8 +29,10 @@ class TestCoffeeShop(unittest.TestCase):
     
     def test_coffee_shop_sell_drink(self):
         self.coffee_shop.sell_drink(self.customer, self.drink)
+        result = self.coffee_shop.sell_drink(self.customer2, self.drink)
         self.assertEqual(110, self.coffee_shop.till)
         self.assertEqual(15, self.customer.wallet)
+        self.assertEqual("Customer is underage", result)
     
     def test_age_check(self):
         result1 = self.coffee_shop.age_check(self.customer)
