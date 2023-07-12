@@ -32,3 +32,8 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(110, self.coffee_shop.till)
         self.assertEqual(15, self.customer.wallet)
     
+    def test_age_check(self):
+        result1 = self.coffee_shop.age_check(self.customer)
+        result2 = self.coffee_shop.age_check(self.customer2)
+        self.assertEqual(True, result1)
+        self.assertEqual(False, result2)
