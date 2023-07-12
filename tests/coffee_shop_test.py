@@ -10,7 +10,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.customer = Customer("Paul", 25, 18, 50)
         self.customer2 = Customer("Mike", 10, 8, 50)
         self.customer3 = Customer("Philip", 30, 20, 100)
-        self.drink = Drink("Mocha", 10, 25)
+        self.drink_mocha = Drink("Mocha", 10, 25)
 
 
     def test_coffee_shop_has_name(self):
@@ -29,9 +29,9 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(90, self.coffee_shop.till)
     
     def test_coffee_shop_sell_drink(self):
-        self.coffee_shop.sell_drink(self.customer, self.drink)
-        result = self.coffee_shop.sell_drink(self.customer2, self.drink)
-        result3 = self.coffee_shop.sell_drink(self.customer3, self.drink)
+        self.coffee_shop.sell_drink(self.customer, self.drink_mocha)
+        result = self.coffee_shop.sell_drink(self.customer2, self.drink_mocha)
+        result3 = self.coffee_shop.sell_drink(self.customer3, self.drink_mocha)
         self.assertEqual(110, self.coffee_shop.till)
         self.assertEqual(15, self.customer.wallet)
         self.assertEqual("Customer is underage", result)
