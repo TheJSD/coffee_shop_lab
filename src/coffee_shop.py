@@ -8,5 +8,6 @@ class CoffeeShop:
 		self.till += amount
 
 	def sell_drink(self, customer, drink):
+
 		drink_price = customer.buy_drink(drink)
 		self.change_till_by_amount(drink_price)

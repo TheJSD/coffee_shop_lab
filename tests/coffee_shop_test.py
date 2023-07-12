@@ -7,7 +7,8 @@ class TestCoffeeShop(unittest.TestCase):
     
     def setUp(self):
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100)
-        self.customer = Customer("Paul", 25)
+        self.customer = Customer("Paul", 25, 18)
+        self.customer2 = Customer("Mike", 10, 8)
         self.drink = Drink("Mocha", 10)
 
 
@@ -30,3 +31,4 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop.sell_drink(self.customer, self.drink)
         self.assertEqual(110, self.coffee_shop.till)
         self.assertEqual(15, self.customer.wallet)
+    

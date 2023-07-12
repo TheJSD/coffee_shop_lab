@@ -5,7 +5,7 @@ from src.drink import Drink
 class TestCustomer(unittest.TestCase):
     
     def setUp(self):
-        self.customer = Customer("Paul", 25)
+        self.customer = Customer("Paul", 25, 18)
         self.drink = Drink("Mocha", 10)
 
     def test_customer_has_name(self):
@@ -21,3 +21,7 @@ class TestCustomer(unittest.TestCase):
     def test_customer_buy_drink(self):
         self.customer.buy_drink(self.drink)
         self.assertEqual(15, self.customer.wallet)
+    
+    def test_customer_get_age(self):
+        return_age = self.customer.get_age()
+        self.assertEqual(self.customer.age, return_age)
