@@ -13,7 +13,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.drink_mocha = Drink("Mocha", 10, 25)
         self.drink_tea = Drink("Tea", 5, 15)
         self.drink_hot_chocolate = Drink("Hot Chocolate", 5, 10)
-        self.coffee_shop = [self.drink_hot_chocolate, self.drink_tea, self.drink_hot_chocolate]
+        self.coffee_shop.drinks = [self.drink_mocha, self.drink_tea, self.drink_hot_chocolate]
 
 
     def test_coffee_shop_has_name(self):
@@ -51,3 +51,7 @@ class TestCoffeeShop(unittest.TestCase):
         result2=self.coffee_shop.energy_check(self.customer3)
         self.assertEqual(True, result1)
         self.assertEqual(False, result2)
+
+    def test_drink_names(self):
+        drinks_list = self.coffee_shop.drink_names()
+        self.assertEqual(["Mocha", "Tea", "Hot Chocolate"], drinks_list)

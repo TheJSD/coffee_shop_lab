@@ -3,6 +3,7 @@ class CoffeeShop:
 	def __init__(self, name, till):
 		self.name = name
 		self.till = till
+		self.drinks = []
 
 	def change_till_by_amount(self, amount):
 		self.till += amount
@@ -32,3 +33,6 @@ class CoffeeShop:
 			return "Customer has too much energy!"
 		drink_price = customer.buy_drink(drink)
 		self.change_till_by_amount(drink_price)
+
+	def drink_names(self):
+		return [drink.name for drink in self.drinks]
