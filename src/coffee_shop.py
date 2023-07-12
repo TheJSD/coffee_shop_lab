@@ -25,7 +25,10 @@ class CoffeeShop:
 		
 	def sell_drink(self, customer, drink):
 		check_age_result = self.age_check(customer)
+		check_energy_result = self.energy_check(customer)
 		if check_age_result == False:
 			return "Customer is underage"
+		if check_energy_result == False:
+			return "Customer has too much energy!"
 		drink_price = customer.buy_drink(drink)
 		self.change_till_by_amount(drink_price)
