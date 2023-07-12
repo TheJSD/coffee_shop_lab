@@ -16,6 +16,13 @@ class CoffeeShop:
 		if result >= 16:
 			return True #16 or over
 		
+	def energy_check(self, customer):
+		result = customer.get_energy()
+		if result >= 100:
+			return False # refuse anyone 100 energy or above
+		if result <100:
+			return True # can serve anyone below 100 energy
+		
 	def sell_drink(self, customer, drink):
 		check_age_result = self.age_check(customer)
 		if check_age_result == False:

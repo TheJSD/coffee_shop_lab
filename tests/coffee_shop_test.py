@@ -9,6 +9,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100)
         self.customer = Customer("Paul", 25, 18, 50)
         self.customer2 = Customer("Mike", 10, 8, 50)
+        self.customer3 = Customer("Philip", 30, 20, 100)
         self.drink = Drink("Mocha", 10, 25)
 
 
@@ -37,5 +38,11 @@ class TestCoffeeShop(unittest.TestCase):
     def test_age_check(self):
         result1 = self.coffee_shop.age_check(self.customer)
         result2 = self.coffee_shop.age_check(self.customer2)
+        self.assertEqual(True, result1)
+        self.assertEqual(False, result2)
+    
+    def test_energy_check(self):
+        result1 = self.coffee_shop.energy_check(self.customer)
+        result2=self.coffee_shop.energy_check(self.customer3)
         self.assertEqual(True, result1)
         self.assertEqual(False, result2)
