@@ -11,6 +11,9 @@ class TestCoffeeShop(unittest.TestCase):
         self.customer2 = Customer("Mike", 10, 8, 50)
         self.customer3 = Customer("Philip", 30, 20, 100)
         self.drink_mocha = Drink("Mocha", 10, 25)
+        self.drink_tea = Drink("Tea", 5, 15)
+        self.drink_hot_chocolate = Drink("Hot Chocolate", 5, 10)
+        self.coffee_shop = [self.drink_hot_chocolate, self.drink_tea, self.drink_hot_chocolate]
 
 
     def test_coffee_shop_has_name(self):
