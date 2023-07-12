@@ -7,9 +7,9 @@ class TestCoffeeShop(unittest.TestCase):
     
     def setUp(self):
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100)
-        self.customer = Customer("Paul", 25, 18)
-        self.customer2 = Customer("Mike", 10, 8)
-        self.drink = Drink("Mocha", 10)
+        self.customer = Customer("Paul", 25, 18, 50)
+        self.customer2 = Customer("Mike", 10, 8, 50)
+        self.drink = Drink("Mocha", 10, 25)
 
 
     def test_coffee_shop_has_name(self):
